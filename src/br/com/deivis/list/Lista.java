@@ -1,6 +1,8 @@
 package br.com.deivis.list;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
 public class Lista {
@@ -35,6 +37,36 @@ public class Lista {
         // Verifica se um elemento pertence a lista
 
         System.out.println("nota 8.9 "+ notas.contains(8.9));
+
+
+        // Exibir a terceira nota adicionada
+
+        System.out.println("Terceira nota"+ notas.get(2));
+
+
+        // Mostrar menor nota
+
+        System.out.println("Menor nota "+Collections.min(notas));
+
+        // Maior nota
+
+        System.out.println("Maior nota "+ Collections.max(notas));
+
+
+        //Somar
+
+        Iterator<Double> iterator =  notas.iterator();
+        Double soma = 0.0;
+        while (iterator.hasNext()){
+            soma += iterator.next();
+        }
+
+        System.out.println("Soma: "+soma );
+
+        // Média
+
+
+        System.out.println("Média: "+soma/notas.size() );
 
 
 

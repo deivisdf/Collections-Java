@@ -55,20 +55,38 @@ public class Lista {
 
         //Somar
 
-        Iterator<Double> iterator =  notas.iterator();
-        Double soma = 0.0;
-        while (iterator.hasNext()){
-            soma += iterator.next();
-        }
+        //Iterator<Double> iterator =  notas.iterator();
+        //Double soma = 0.0;
+        //while (iterator.hasNext()){
+          //  soma += iterator.next();
+        //}
 
-        System.out.println("Soma: "+soma );
+        //System.out.println("Soma: "+soma );
 
         // Média
 
 
-        System.out.println("Média: "+soma/notas.size() );
+        //System.out.println("Média: "+soma/notas.size() );
 
 
+        // remover da posição i
+
+        System.out.println("removeu "+ notas.remove(1));
+
+        System.out.println(notas);
+
+// remover notas menores que 7
+
+
+        Iterator<Double> iterator =  notas.iterator();
+        while (iterator.hasNext()){
+            Double  x = iterator.next();
+            if (x < 7){
+                iterator.remove();
+            }
+        }
+
+        System.out.println("notas que sobraram "+ notas);
 
 
 

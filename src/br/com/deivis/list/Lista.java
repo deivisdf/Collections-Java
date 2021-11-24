@@ -1,5 +1,6 @@
 package br.com.deivis.list;
 
+import java.text.CollationElementIterator;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
@@ -87,6 +88,32 @@ public class Lista {
         }
 
         System.out.println("notas que sobraram "+ notas);
+
+
+        List<Gato> meusGatos = new ArrayList<>(){{
+           add(new Gato("Jon",18,"verde"));
+           add(new Gato("Marcio",8,"laranja"));
+           add(new Gato("Lia",2,"amarelo"));
+            add(new Gato("Aline",2,"amarelo"));
+        }};
+
+        System.out.println(meusGatos);
+
+        //bagunçando a parada
+        Collections.shuffle(meusGatos);
+
+        System.out.println(meusGatos);
+
+        Collections.sort(meusGatos);
+
+
+        System.out.println(meusGatos);
+        Collections.sort(meusGatos, new ComparatorIdade());
+
+        System.out.println(meusGatos);
+
+
+
 
 
 
